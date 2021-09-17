@@ -1,0 +1,20 @@
+Given a string s, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+
+ 
+
+Example 1:
+
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function(s) {
+    s = s.replace(/[^0-9a-zA-Z]+/gmi,"").toLowerCase();
+    return s === s.split("").reverse().join("");
+    
+};
